@@ -42,7 +42,9 @@
                             <input type="checkbox" name="del[]" value="<?=$row['id'];?>">
                         </td>
                         <td>
-                            <input type="button" value="更新圖片">
+                            <input type="button" value="更新圖片"
+                                onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;./modal/update_<?=$do;?>.php&#39;)"
+                                value="新增網站標題圖片">
                         </td>
                         <input type="hidden" name="id[]" value="<?=$row['id'];?>">
                     </tr>
