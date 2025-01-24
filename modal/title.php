@@ -16,6 +16,7 @@
         </tr>
     </table>
     <div class="cent">
+        <input type="hidden" name="table" value="title">
         <input type="submit" value="新增">
         <input type="reset" value="重置">
     </div>

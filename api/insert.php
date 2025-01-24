@@ -2,9 +2,8 @@
 
 include_once "db.php";
 
-// $_POST['img'];
-// $_POST['text'];
-// $_POST['sh'];
+$table=$_POST['table'];
+$db=ucfirst($table);
 
 if(!empty($_FILES['img']['tmp_name'])){
     move_uploaded_file($_FILES['img']['tmp_name'],"../upload/".$_FILES['img']['name']);
@@ -12,8 +11,10 @@ if(!empty($_FILES['img']['tmp_name'])){
     
 }
 
-$Title->save($_POST);
+unset($_POST['table']);
 
-to("../admin.php?do=title");
+$$db->save($_POST);
+
+to("../admin.php?do=$table");
 
 ?>
