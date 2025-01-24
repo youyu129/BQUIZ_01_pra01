@@ -3,6 +3,7 @@
 include_once "db.php";
 
 $table=$_POST['table'];
+
 $db=ucfirst($table);
 
 if(!empty($_FILES['img']['tmp_name'])){
@@ -18,3 +19,11 @@ $$db->save($_POST);
 to("../admin.php?do=$table");
 
 ?>
+
+<?php
+// $table=title
+// ucfirst($table)
+// ucfirst(title)=>Title
+// $db=Title
+// $$db=${Title}
+// $$db=$Title
