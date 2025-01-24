@@ -14,7 +14,7 @@
     </table>
     <div style="width:99%; height:87%; margin:auto; overflow:auto; border:#666 1px solid;">
         <p class="t cent botli">動態文字廣告管理</p>
-        <form method="post" target="back" action="./api/edit.php">
+        <form method="post" target="back" action="./api/edit_ad.php">
             <table width="100%" class="cent">
                 <tbody>
                     <tr class="yel">
@@ -29,7 +29,7 @@
                     ?>
                     <tr>
                         <td>
-                            <input type="text" name="text" value="<?=$row['text'];?>">
+                            <input type="text" name="text[]" value="<?=$row['text'];?>">
                         </td>
                         <td>
                             <input type="checkbox" name="sh[]" value="<?=$row['id'];?>"
