@@ -15,6 +15,7 @@ if(isset($_POST['id'])){
             switch ($table) {
                 case 'title':
                     $row['sh']=(isset($_POST['sh']) && $_POST['sh']==$id)?1:0;
+                    $row['text']=$_POST['text'][$idx];
                     break;
                 case 'admin':
                     break;
