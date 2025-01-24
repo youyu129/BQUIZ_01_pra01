@@ -33,18 +33,18 @@
                             <img src="./upload/<?=$row['img'];?>" alt="" style="width: 300px;height:30px">
                         </td>
                         <td width="23%">
-                            <input type="text" name="text" value="<?=$row['text'];?>">
+                            <input type="text" name="text[]" value="<?=$row['text'];?>">
                         </td>
                         <td width="7%">
-                            <input type="radio" name="sh[]" value="<?=$row['id'];?>">
+                            <input type="radio" name="sh" value="<?=$row['id'];?>">
                         </td>
                         <td width="7%">
                             <input type="checkbox" name="del[]" value="<?=$row['id'];?>">
                         </td>
                         <td>
-                            <input type="hidden" name="id[]" value="<?=$row['id'];?>">
                             <input type="button" value="更新圖片">
                         </td>
+                        <input type="hidden" name="id[]" value="<?=$row['id'];?>">
                     </tr>
                     <?php endforeach;?>
                 </tbody>
