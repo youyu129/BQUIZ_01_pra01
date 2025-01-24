@@ -12,5 +12,6 @@
     <div class="cent">
         <input type="submit" value="更新">
         <input type="reset" value="重置">
+        <input type="hidden" name="id" value="<?=$_GET['id'];?>">
     </div>
 </form>
