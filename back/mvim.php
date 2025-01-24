@@ -24,7 +24,7 @@
                         <td width="23%"></td>
                     </tr>
                     <?php
-                    $rows=$Title->all();
+                    $rows=$Mvim->all();
                     foreach($rows as $row):
                     ?>
                     <tr>
