@@ -15,15 +15,33 @@
     <div style="width:99%; height:87%; margin:auto; overflow:auto; border:#666 1px solid;">
         <p class="t cent botli">動態文字廣告管理</p>
         <form method="post" target="back" action="./api/edit.php">
-            <table width="100%">
+            <table width="100%" class="cent">
                 <tbody>
                     <tr class="yel">
-                        <td width="45%">網站標題</td>
-                        <td width="23%">替代文字</td>
-                        <td width="7%">顯示</td>
-                        <td width="7%">刪除</td>
+                        <td width="80%">動態文字廣告</td>
+                        <td width="10%">顯示</td>
+                        <td width="10%">刪除</td>
                         <td></td>
                     </tr>
+                    <?php
+                    $rows=$Ad->all();
+                    foreach($rows as $row):
+                    ?>
+                    <tr>
+                        <td>
+                            <input type="text" name="text" value="<?=$row['text'];?>">
+                        </td>
+                        <td>
+                            <input type="checkbox" name="sh[]" value="<?=$row['id'];?>"
+                                <?=$row['sh']==1?'checked':'';?>>
+                        </td>
+                        <td>
+                            <input type="checkbox" name="del[]" value="<?=$row['id'];?>">
+                        </td>
+
+                        <input type="hidden" name="id[]" value="<?=$row['id'];?>">
+                    </tr>
+                    <?php endforeach;?>
                 </tbody>
             </table>
             <table style="margin-top:40px; width:70%;">
