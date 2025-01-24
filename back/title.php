@@ -15,7 +15,7 @@
     <div style="width:99%; height:87%; margin:auto; overflow:auto; border:#666 1px solid;">
         <p class="t cent botli">網站標題管理</p>
         <form method="post" target="back" action="?do=tii">
-            <table width="100%">
+            <table width="100%" class="cent">
                 <tbody>
                     <tr class="yel">
                         <td width="45%">網站標題</td>
@@ -24,6 +24,18 @@
                         <td width="7%">刪除</td>
                         <td></td>
                     </tr>
+                    <?php
+                    $rows=$Title->all();
+                    foreach($rows as $row):
+                    ?>
+                    <tr>
+                        <td width="45%"></td>
+                        <td width="23%"></td>
+                        <td width="7%"> </td>
+                        <td width="7%"> </td>
+                        <td></td>
+                    </tr>
+                    <?php endforeach;?>
                 </tbody>
             </table>
             <table style="margin-top:40px; width:70%;">
