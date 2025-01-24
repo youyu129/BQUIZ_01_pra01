@@ -32,7 +32,9 @@
                         <td width="45%">
                             <img src="./upload/<?=$row['img'];?>" alt="" style="width: 300px;height:30px">
                         </td>
-                        <td width="23%"><?=$row['text'];?></td>
+                        <td width="23%">
+                            <input type="text" name="text" value="<?=$row['text'];?>">
+                        </td>
                         <td width="7%">
                             <input type="radio" name="sh[]" value="<?=$row['id'];?>">
                         </td>
@@ -40,7 +42,7 @@
                             <input type="checkbox" name="del[]" value="<?=$row['id'];?>">
                         </td>
                         <td>
-                            <button>更新圖片</button>
+                            <input type="button" value="更新圖片">
                         </td>
                     </tr>
                     <?php endforeach;?>
