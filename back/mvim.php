@@ -14,7 +14,7 @@
     </table>
     <div style="width:99%; height:87%; margin:auto; overflow:auto; border:#666 1px solid;">
         <p class="t cent botli">動畫圖片管理</p>
-        <form method="post" target="back" action="./api/edit.php">
+        <form method="post" action="./api/edit.php">
             <table width="100%" class="cent">
                 <tbody>
                     <tr class="yel">
@@ -29,7 +29,7 @@
                     ?>
                     <tr>
                         <td>
-                            <img src="./upload/<?=$row['img'];?>" alt="" style="width: 300px;height:30px">
+                            <img src="./upload/<?=$row['img'];?>" alt="" style="width: 120px;height:80px">
                         </td>
                         <td>
                             <input type="checkbox" name="sh[]" value="<?=$row['id'];?>"
@@ -53,7 +53,7 @@
                     <tr>
                         <td width="200px"><input type="button"
                                 onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;./modal/<?=$do;?>.php&#39;)"
-                                value="新增網站標題圖片"></td>
+                                value="新增動畫圖片"></td>
                         <td class="cent">
                             <input type="hidden" name="table" value="<?=$do;?>">
                             <input type="submit" value="修改確定">
