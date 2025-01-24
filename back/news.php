@@ -29,7 +29,7 @@
                     ?>
                     <tr>
                         <td>
-                            <textarea name="text[]" id=""><?=$row['text'];?></textarea>
+                            <textarea name="text[]" id="" style="width:95%;"><?=$row['text'];?></textarea>
                         </td>
                         <td>
                             <input type="checkbox" name="sh[]" value="<?=$row['id'];?>"
