@@ -23,6 +23,8 @@ if(isset($_POST['id'])){
                     break;
 
                 case 'menu':
+                    $row['text']=$_POST['text'][$idx];
+                    $row['href']=$_POST['href'][$idx];
                     break;
                             
                 default:
