@@ -25,7 +25,8 @@
                     </tr>
                     <?php
                     $rows=$Admin->all();
-                    foreach($rows as $row):
+                    foreach($rows as $row){
+                        if($row['acc']!='admin'){
                     ?>
                     <tr>
                         <td>
@@ -40,7 +41,9 @@
 
                         <input type="hidden" name="id[]" value="<?=$row['id'];?>">
                     </tr>
-                    <?php endforeach;?>
+                    <?php
+                    }}
+                    ?>
                 </tbody>
             </table>
             <table style="margin-top:40px; width:70%;">
