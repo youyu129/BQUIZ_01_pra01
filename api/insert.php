@@ -13,6 +13,7 @@ if(!empty($_FILES['img']['tmp_name'])){
 }
 
 unset($_POST['table']);
+unset($_POST['pw2']);
 
 $$db->save($_POST);
 
