@@ -5,19 +5,19 @@
         <tr>
             <td>帳號：</td>
             <td>
-                <input type="text" name="acc">
+                <input type="text" name="acc" id="acc">
             </td>
         </tr>
         <tr>
             <td>密碼：</td>
             <td>
-                <input type="password" name="pw">
+                <input type="password" name="pw" id="pw">
             </td>
         </tr>
         <tr>
             <td>確認密碼：</td>
             <td>
-                <input type="password" name="pw2">
+                <input type="password" name="pw2" id="pw2">
             </td>
         </tr>
     </table>
