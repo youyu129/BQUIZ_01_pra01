@@ -43,7 +43,7 @@
                         </td>
                         <td>
                             <input type="button" value="更新圖片"
-                                onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;./modal/update_<?=$do;?>.php?id=<?=$row['id'];?>&#39;)"
+                                onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;./modal/update_<?=$do;?>.php?id=<?=$row['id'];?>&table=<?=$do;?>&#39;)"
                                 value="新增網站標題圖片">
                         </td>
                         <input type="hidden" name="id[]" value="<?=$row['id'];?>">
@@ -55,7 +55,7 @@
                 <tbody>
                     <tr>
                         <td width="200px"><input type="button"
-                                onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;./modal/<?=$do;?>.php&#39;)"
+                                onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;./modal/<?=$do;?>.php?table=<?=$do;?>&#39;)"
                                 value="新增網站標題圖片"></td>
                         <td class="cent">
                             <input type="hidden" name="table" value="<?=$do;?>">
