@@ -40,8 +40,7 @@
                         </td>
                         <td>
                             <input type="button" value="更換動畫"
-                                onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;./modal/update_<?=$do;?>.php?id=<?=$row['id'];?>&#39;)"
-                                value="新增動畫圖片">
+                                onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;./modal/update_<?=$do;?>.php?id=<?=$row['id'];?>&table=<?=$do;?>&#39;)">
                         </td>
                         <input type="hidden" name="id[]" value="<?=$row['id'];?>">
                     </tr>
