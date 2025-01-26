@@ -59,12 +59,33 @@
                     <?php endforeach;?>
                 </tbody>
             </table>
+            <div class="cent">
+
+                <?php
+
+                if(($now-1)>0){
+                    $prev=$now-1;
+                    echo "<a href='?do=$do&p=$prev'><</a>";
+                }
+
+                for($i=1;$i<=$pages;$i++){
+                    echo "<a href='?do=$do&p=$i'>$i</a>";
+                }
+
+                if(($now+1)<=$pages){
+                    $next=$now+1;
+                    echo "<a href='?do=$do&p=$next'>></a>";
+                }
+
+                ?>
+            </div>
             <table style="margin-top:40px; width:70%;">
                 <tbody>
                     <tr>
                         <td width="200px"><input type="button"
                                 onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;./modal/<?=$do;?>.php&#39;)"
-                                value="新增校園映像圖片"></td>
+                                value="新增校園映像圖片">
+                        </td>
                         <td class="cent">
                             <input type="hidden" name="table" value="<?=$do;?>">
                             <input type="submit" value="修改確定">
