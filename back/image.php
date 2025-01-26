@@ -24,7 +24,19 @@
                         <td width="23%"></td>
                     </tr>
                     <?php
-                    $rows=$Image->all();
+                    // 計算資料庫有幾筆資料
+                    $total=$Image->count();
+                    // 一頁顯示3筆資料
+                    $div=3;
+                    // 總共需要的頁數
+                    $pages=ceil($total/$div);
+                    // 如果沒有GET p就當作是第一頁
+                    $now=$_GET['p']??1;
+                    // 開始的那一筆資料 會是哪一個索引
+                    $start=($now-1)*$div;
+                    // 從start開始抓 抓div筆資料
+                    
+                    $rows=$Image->all(" limit $start,$div");
                     foreach($rows as $row):
                     ?>
                     <tr>
