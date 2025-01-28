@@ -23,14 +23,15 @@ $rows=$Menu->all(['main_id'=>$_GET['id']]);
             ?>
             <tr>
                 <td>
-                    <input type="text" name="text" id="text" value="<?=$row['text'];?>">
+                    <input type="text" name="text[]" id="text" value="<?=$row['text'];?>">
                 </td>
                 <td>
-                    <input type="text" name="herf" id="herf" value="<?=$row['href'];?>">
+                    <input type="text" name="herf[]" id="herf" value="<?=$row['href'];?>">
                 </td>
                 <td>
                     <input type="checkbox" name="del[]" id="del" value="<?=$row['id'];?>">
                 </td>
+                <input type="hidden" name="id[]" value="<?=$row['id'];?>">
             </tr>
             <?php
             }
