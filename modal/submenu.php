@@ -9,7 +9,7 @@
                 <th>刪除</th>
             </tr>
         </thead>
-        <tbody id="moreInput">
+        <tbody id="moreSubmenu">
             <tr>
                 <td>
                     <input type="text" name="text" id="text">
@@ -46,6 +46,6 @@ function more() {
                 </td>
             </tr>
     `
-    $("#more").append(row)
+    $("#moreSubmenu").append(row)
 }
 </script>
