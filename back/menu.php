@@ -26,7 +26,7 @@
                         <td width="16%"></td>
                     </tr>
                     <?php
-                    $rows=$Menu->all();
+                    $rows=$Menu->all(['main_id'=>'0']);
                     foreach($rows as $row):
                     ?>
                     <tr>

@@ -1,6 +1,12 @@
+<?php
+include_once "../api/db.php";
+
+$rows=$Menu->all(['main_id'=>$_GET['id']]);
+?>
+
 <h3 class="cent">編輯次選單</h3>
 <hr>
-<form action="api/edit.php" method="post" enctype="multipart/form-data">
+<form action="api/submenu.php" method="post" enctype="multipart/form-data">
     <table class="cent" style="width:70%;margin:auto;">
         <thead>
             <tr>
@@ -10,17 +16,25 @@
             </tr>
         </thead>
         <tbody id="moreSubmenu">
+            <?php
+            foreach($rows as $row){
+            
+
+            ?>
             <tr>
                 <td>
-                    <input type="text" name="text" id="text">
+                    <input type="text" name="text" id="text" value="<?=$row['text'];?>">
                 </td>
                 <td>
-                    <input type="text" name="herf" id="herf">
+                    <input type="text" name="herf" id="herf" value="<?=$row['href'];?>">
                 </td>
                 <td>
-                    <input type="checkbox" name="del[]" id="del">
+                    <input type="checkbox" name="del[]" id="del" value="<?=$row['id'];?>">
                 </td>
             </tr>
+            <?php
+            }
+            ?>
         </tbody>
     </table>
 
