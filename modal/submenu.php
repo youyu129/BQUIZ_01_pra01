@@ -53,10 +53,10 @@ function more() {
     let row = `
                 <tr>
                 <td>
-                    <input type="text" name="text2" id="text">
+                    <input type="text" name="text2[]" id="text">
                 </td>
                 <td>
-                    <input type="text" name="herf2" id="herf">
+                    <input type="text" name="href2[]" id="herf">
                 </td>
             </tr>
     `
