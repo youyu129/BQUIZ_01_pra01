@@ -13,22 +13,22 @@
         </tbody>
     </table>
     <div style="width:99%; height:87%; margin:auto; overflow:auto; border:#666 1px solid;">
-        <p class="t cent botli">進站總人數管理</p>
-        <form method="post" action="./api/update_total.php">
+        <p class="t cent botli">頁尾版權資料管理</p>
+        <form method="post" action="./api/update_bottom.php">
             <div class="cent">
                 <div style="background:#F3DA49;width:120px;display:inline-block;">
-                    進站總人數：
+                    頁尾版權資料：
                 </div>
                 <?php
-                $row=$Total->find(1);
+                $row=$Bottom->find(1);
                 
                 ?>
                 <div style="width:200px;display:inline">
-                    <input type="number" name="total" value="<?=$row['total'];?>">
+                    <input type="text" name="bottom" value="<?=$row['bottom'];?>">
                 </div>
             </div>
             <div class="cent" style="margin-top:100px">
-                <input type="hidden" name="table" value="total">
+                <input type="hidden" name="table" value="bottom">
                 <input type="submit" value="修改確定"
                     onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;./api/update_<?=$do;?>.php&#39;)">
                 <input type="reset" value="重置">
