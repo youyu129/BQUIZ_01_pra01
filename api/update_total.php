@@ -2,6 +2,9 @@
 
 include_once "db.php";
 
-$total=$_POST['total'];
+$total=$Total->find(1);
+$total['total']=$_POST['total'];
+$Total->save($total);
 
+to("../admin.php?do=total");
 ?>
