@@ -29,8 +29,7 @@
             </div>
             <div class="cent" style="margin-top:100px">
                 <input type="hidden" name="table" value="bottom">
-                <input type="submit" value="修改確定"
-                    onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;./api/update_<?=$do;?>.php&#39;)">
+                <input type="submit" value="修改確定">
                 <input type="reset" value="重置">
             </div>
         </form>
