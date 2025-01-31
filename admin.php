@@ -26,7 +26,7 @@ include_once "api/db.php";
     </div>
     <iframe style="display:none;" name="back" id="back"></iframe>
     <div id="main">
-        <a title="" href="?">
+        <a title="" href="index.php">
             <div class="ti"
                 style="background:url('./upload/<?=$Title->find(['sh'=>1])['img'];?>'); background-size:cover;">
 
