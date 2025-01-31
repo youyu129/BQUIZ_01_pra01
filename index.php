@@ -25,7 +25,7 @@ include_once "./api/db.php";
     </div>
 
     <div id="main">
-        <a title="" href="./home_files/home.htm">
+        <a title="" href="index.php">
             <div class="ti" style="background:url(&#39;use/&#39;); background-size:cover;">
                 <img src="" alt="">
             </div>
