@@ -2,9 +2,12 @@
 
 include_once "db.php";
 
-$total=$Total->find(1);
-$total['total']=$_POST['total'];
-$Total->save($total);
+$table=$_POST['table'];
+$db=ucfirst($table);
 
-to("../admin.php?do=total");
+$row=$$db->find(1);
+$row[$table]=$_POST[$table];
+$$db->save($row);
+
+to("../admin.php?do=$table");
 ?>
