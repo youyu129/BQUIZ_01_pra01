@@ -1,5 +1,5 @@
 <?php
-include_once "./api/db.php";
+include_once "api/db.php";
 ?>
 <!DOCTYPE html
     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -26,8 +26,9 @@ include_once "./api/db.php";
 
     <div id="main">
         <a title="" href="index.php">
-            <div class="ti" style="background:url(&#39;use/&#39;); background-size:cover;">
-                <img src="" alt="">
+            <div class="ti"
+                style="background:url('./upload/<?=$Title->find(['sh'=>1])['img'];?>'); background-size:cover;">
+
             </div>
             <!--標題-->
         </a>
